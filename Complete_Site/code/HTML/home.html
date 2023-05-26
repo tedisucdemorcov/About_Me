@@ -4,13 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All about me</title>
+    <title>Master</title>
     <link rel="stylesheet" href="../CSS/css_all_container.css" />
+    <script src="../JS/home.js" defer></script>
   </head>
   <body>
+    <!-- navbar home -->
+    <!-- in this section we will add navbar with buttons ( links ), home , about , personal projects etc -->
+    <nav class="container__navbar">
+      <ul>
+        <li><a href="../HTML/home.html">Home</a></li>
+        <li class="projects">
+          <a id="projects" href="#">projects</a>
+          <ul class="active dropdown">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JS</a></li>
+            <li><a href="#">Angular</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Teodor</a></li>
+      </ul>
+    </nav>
+
     <!-- background animated for home page -->
-    <div class="container">
-      <div class="bubbles">
+    <div class="container__background">
+      <div class="container__background__bubbles">
         <span style="--i: 11"></span>
         <span style="--i: 12"></span>
         <span style="--i: 24"></span>
@@ -66,14 +85,6 @@
       </div>
     </div>
 
-    <!-- navbar home -->
-    <!-- in this section we will add navbar with buttons ( links ), home , about , personal projects etc -->
-    <div class="conatiner__navbar">
-      <div class="container__navbar__left__abouts">
-        <a href="#">home</a>
-        <a href="#">about</a>
-      </div>
-      <div class="container__navbar__right_icon"></div>
-    </div>
+    <!-- about -->
   </body>
 </html>

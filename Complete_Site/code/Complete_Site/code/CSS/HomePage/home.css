@@ -1,0 +1,254 @@
+@import url("../global_variables.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar orientation end position */
+.container__navbar {
+  margin: 0;
+  padding: 1em;
+  position: relative;
+  z-index: 999;
+  background: #0c192c;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.container__navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #0c192c;
+}
+
+.container__navbar li {
+  display: inline-block;
+}
+
+.container__navbar li a {
+  color: white;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-inline: 4em;
+  text-align: center;
+  transition: 0.6s;
+}
+.container__navbar li a:hover {
+  transform: scale(1.3);
+  color: var(--nav_blue);
+  font-weight: 500;
+  border: 0.2px solid white;
+  border-radius: 10%;
+}
+
+/* Style the dropdown menu */
+.container__navbar ul ul {
+  background-color: transparent;
+}
+.dropdown {
+  z-index: -1;
+  transform: translateY(-300px);
+  position: absolute;
+  transition: 2s;
+}
+.projects {
+  position: relative;
+}
+.active {
+  position: absolute;
+  transition: 2s;
+  transform: translateY(0);
+  background-color: red;
+}
+
+.container__navbar ul ul li {
+  display: block;
+}
+
+.container__navbar li:hover ul {
+  display: block;
+  cursor: pointer;
+}
+
+/* Change the background color of dropdown links on hover */
+.container__navbar ul ul li a:hover {
+  margin-top: 10px;
+  background-color: #4224567b;
+  border-radius: 10%;
+
+}
+
+/* background zone */
+.container__background {
+  background: #0c192c;
+  position: relative;
+  height: 30em;
+  overflow: hidden;
+  border-radius: 0% 0% 10% 10%;
+}
+.container__background__bubbles {
+  position: relative;
+  display: flex;
+  margin-right: 1em;
+}
+.container__background__bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: var(--ocean_blue);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px var(--dark_blue), 0 0 50px var(--ocean_blue),
+    0 0 100px var(--ocean_blue);
+  animation: animate 10s linear infinite;
+  animation-duration: calc(100s / var(--i));
+}
+.container__background__bubbles span:nth-child(even) {
+  background: var(--light_pink);
+  box-shadow: 0 0 0 10px var(--sour_cherry), 0 0 50px var(--light_pink),
+    0 0 100px var(--light_pink);
+}
+@keyframes animate {
+  0% {
+    transform: translateY(-100vh) scale(0);
+  }
+  100% {
+    transform: translateY(100vh) scale(1);
+  }
+}
+
+/* about  */
+
+.container__title__top
+{
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 6em;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.container__title__top h3
+{
+  transition: 0.5s;
+}
+.container__title__top h3:hover
+{
+ 
+    scale: 1.2; 
+    color: var(--ocean_blue);
+    animation: none;
+    font-weight: 700;
+}
+
+.container__title__top .paragraf
+{
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1em;
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 600;
+}
+.container__title__top .paragraf
+{
+  transition: 0.7s;
+}
+.container__title__top .paragraf:hover  
+{
+ 
+    scale: 1.1; 
+    color: var(--ocean_blue);
+    animation: none;
+    font-weight: 400;
+}
+
+/* card flip-flop */
+
+/* description part about mission and vision */
+
+/* mision part card */
+.container__about__site_flip
+{
+  
+  position: relative;
+  width: 600px;
+  height: 300px;  
+  margin: auto;
+  
+}
+.container__about__site_flip .thecard
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  /* preserve-3d conserve the order of the line, the text will be not in mirror after rotate */
+  transition:  0.8s ;
+  
+}
+.thecard:hover
+{
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.container__about__site_flip .thecard .thefront
+{
+  margin-top: 400px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: var(--dark_accent_blue);
+  color: #333;
+  border-radius: 5%;
+}
+.container__about__site_flip .thecard .thefront h3
+{
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(75, 6, 120);
+  font-weight: 700;
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+}
+.container__about__site_flip .thecard .thefront p
+{
+  margin-top: 20px ;
+  text-align: center;
+  margin-inline: 10px;
+  color: black;
+}
+.container__about__site_flip .thecard .thefront img
+{
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+  align-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+}
+.container__about__site_flip .thecard .theback
+{
+  margin-top: 400px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fafafa;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+/* description part about mission and vision */
+
+/* mision part card */
+
